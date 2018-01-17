@@ -1,0 +1,15 @@
+{
+  "name": "nicholasmole/full-search-bar",
+  "version" : "1.0.0",
+  "description": "Makes the full search bar on the Main Menu!",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Nicholas Mole",
+      "email": "nmole065@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1"
+  }
+}
