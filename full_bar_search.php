@@ -9,11 +9,11 @@
 
 
 function FullSearchBarCSS(){
-  wp_register_style( 'full-bar-search', plugins_url('full-bar-search').'/src/css/search-form-style.css' );
+  wp_register_style( 'full-bar-search', plugins_url('full-search-bar').'/src/css/search-form-style.css' );
   wp_enqueue_style( 'full-bar-search' );
 }
 function FullSearchBarJS(){
-  wp_register_script( 'full-bar-script', plugins_url('full-bar-search').'/src/js/search-form-script.js' );
+  wp_register_script( 'full-bar-script', plugins_url('full-search-bar').'/src/js/search-form-script.js' );
   wp_enqueue_script( 'full-bar-script' );
 }
 
