@@ -14,6 +14,16 @@ the menu disappears
   //Cleary forced this to be second class
   var searchBarClicked = document.getElementsByClassName('header-widgetised-area')[1];
 
+
+    function resizeSearchUnfocus(){
+        searchBarClicked.getElementsByTagName("input")[0].blur();
+        onFocus();
+    }
+    //force resize check
+    document.getElementsByTagName("BODY")[0].onresize = function() {resizeSearchUnfocus()};
+
+
+
   function onFocus(){
      
       if(initialSearch != 0){
