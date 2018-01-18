@@ -14,6 +14,22 @@ the menu disappears
   //Cleary forced this to be second class
   var searchBarClicked = document.getElementsByClassName('header-widgetised-area')[1];
 
+  function onFocus(){
+      if(initialSearch != 0){
+        document.getElementsByClassName('search-field')[0].blur();
+        if(primarymenu.classList.contains("makeOpacitynone") ){
+            primarymenu.classList.remove("makeOpacitynone");
+        }
+
+        if(searchBarClicked.classList.contains("actionSearch") ){
+            searchBarClicked.classList.remove("actionSearch");
+            initialSearch = 0;
+        }
+
+      }
+  }
+  window.onfocus = onFocus;
+
 
   function searchClickToggleCSS(){
       
@@ -32,6 +48,7 @@ the menu disappears
           }
       }
   }
+
   function reEstablishSearchForm(){
       var searchFieldClass = document.getElementsByClassName("search-field");
       searchFieldClass[0].style.transition =  "width 400ms ease, background 300ms ease";
