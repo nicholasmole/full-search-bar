@@ -15,9 +15,12 @@ the menu disappears
   var searchBarClicked = document.getElementsByClassName('header-widgetised-area')[1];
 
   function onFocus(){
+     
       if(initialSearch != 0){
+
         document.getElementsByClassName('search-field')[0].blur();
-        if(primarymenu.classList.contains("makeOpacitynone") ){
+        
+        if(primarymenu.classList.contains("makeOpacitynone")){
             primarymenu.classList.remove("makeOpacitynone");
         }
 
@@ -30,23 +33,34 @@ the menu disappears
   }
   window.onfocus = onFocus;
 
+  var mq = window.matchMedia( "(max-width: 767px)" );
+
 
   function searchClickToggleCSS(){
       
-      if(initialSearch == 0){
-          initialSearch = 1;
-          if( !primarymenu.classList.contains("makeOpacitynone")  ){
-              primarymenu.className += " makeOpacitynone";
-              searchBarClicked.className += " actionSearch";
-          }
+    /*------------
+    If no initial search - make things invisible
+    If yes make things visible.
+    --------------*/
+    if(mq.matches){
+        console.log('inital search = ' + initialSearch);
 
-      } else {
-          initialSearch = 0;
-          if(primarymenu.classList.contains("makeOpacitynone") ){
-              primarymenu.classList.remove("makeOpacitynone");
-              searchBarClicked.classList.remove("actionSearch");
-          }
-      }
+        return;
+    }
+    if(initialSearch == 0){
+        initialSearch = 1;
+        if( !primarymenu.classList.contains("makeOpacitynone")  ){
+            primarymenu.className += " makeOpacitynone";
+            searchBarClicked.className += " actionSearch";
+        }
+
+    } else {
+        initialSearch = 0;
+        if(primarymenu.classList.contains("makeOpacitynone") ){
+            primarymenu.classList.remove("makeOpacitynone");
+            searchBarClicked.classList.remove("actionSearch");
+        }
+    }
   }
 
   function reEstablishSearchForm(){
