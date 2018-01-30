@@ -71,6 +71,8 @@ display:none;
 }
 .search-form label .search-field {
   padding: 0 25px 0 15px;
+  border-color: rgba(0,0,0,0) !important;
+  border-radius: 5px;
 }
 
 /*** Search Click ***/
