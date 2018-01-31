@@ -9,7 +9,7 @@
 
 
 function FullSearchBarCSS(){
-  wp_register_style( 'full-bar-search', plugins_url('full-search-bar').'/src/css/search-form-style.css' );
+  wp_register_style( 'full-bar-search', plugins_url('full-search-bar').'/src/css/search-form-style.css', [], '5.0.0' );
   wp_enqueue_style( 'full-bar-search' );
 }
 function FullSearchBarJS(){
