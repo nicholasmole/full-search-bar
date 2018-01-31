@@ -2,7 +2,7 @@
 Search On Menu Bar
 --------------------------------------------------------------*/
 
-@media only screen and (max-width: 1180px){
+@media only screen and (max-width: 1200px){
   #main-menu{
       margin-left: 24% !important;
   }
@@ -133,6 +133,31 @@ input.search-field:focus {
 @media only screen and (max-width: 991px){
   .actionSearch.header-widgetised-area {
     width: 530px;
+  }
+}
+@media only screen and (width: 768px){
+  .search-form button[type="submit"] {
+    background-color: #fff !important;
+    border-radius: 4px;
+  }
+  .search-field {
+    width: 70% !important;
+  }
+  .search-form input[type="submit"], .search-form button[type="submit"] {
+    padding: 15px;
+    display: inline-block;
+  }
+  .search-field:focus {
+    background-color: #fff;
+    border: 2px solid black;
+    cursor: text;
+    width: 180px !important;
+  }
+  input.search-field::placeholder {
+    color: rgba(0, 0, 0, 0);
+  }
+  .search-form:after {
+    color: #555 !important;
   }
 }
 

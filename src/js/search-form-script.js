@@ -43,7 +43,7 @@ the menu disappears
   }
   window.onfocus = onFocus;
 
-  var mq = window.matchMedia( "(max-width: 767px)" );
+  var mq = window.matchMedia( "(max-width: 768px)" );
 
 
   function searchClickToggleCSS(){
