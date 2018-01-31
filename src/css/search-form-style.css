@@ -121,7 +121,7 @@ display:none;
   display: none !important;
 }
 input.search-field:focus {
-  border-color: #d4d4d4;
+  border-color: #d4d4d4 !important;
 }
 
 
