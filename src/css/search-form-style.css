@@ -180,3 +180,7 @@ input.search-field:focus {
   }
 }
 
+#main-menu .header-widgetised-area{
+	height:64px;
+}
+
